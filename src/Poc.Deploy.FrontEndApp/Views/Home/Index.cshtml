@@ -1,0 +1,28 @@
+﻿@model Poc.Deploy.FrontEndApp.DataReadServices.EmployerSummaryData
+
+<div class="jumbotron">
+    <h1>Deployable POC</h1>
+</div>
+
+<div class="row">
+
+    <div class="table-responsive">
+        <table class="table table-striped ">
+            <thead>
+            <tr><th>Id</th></tr>
+            <tr><th>Name</th></tr>
+            <tr><th>Total salary</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.EmployerId</td>
+                    <td>@Model.EmployerName</td>
+                    <td>@Model.TotalSalary</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    @Html.ActionLink("Hire", "HireEmployee")
+
+</div>
