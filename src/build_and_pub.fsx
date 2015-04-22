@@ -14,7 +14,7 @@ Target "Clean" (fun _ ->
 )
 
 Target "BuildServices" (fun _ -> 
-   !! "./**/*ServiceHost.csproj"
+   !! "./**/*Service.csproj"
    |> MSBuildRelease servicesOutDir "Build"
    |> Log "Services-Out: "
 )

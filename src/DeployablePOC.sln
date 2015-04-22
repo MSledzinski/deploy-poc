@@ -12,8 +12,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{57
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poc.Deploy.WriteWinService", "Poc.Deploy.WriteWinService\Poc.Deploy.WriteWinService.csproj", "{CE5B929C-C3A1-4A58-8EBB-2EE4B5B70C49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poc.Deploy.WriteWinServiceHost", "Poc.Deploy.WriteWinServiceHost\Poc.Deploy.WriteWinServiceHost.csproj", "{8AF84EEC-BF8A-4AAE-9359-357DBCC65C32}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{D00B2FFC-1263-4A51-AA74-70D6BD465FA5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poc.Deploy.CommonModels", "Poc.Deploy.CommonModels\Poc.Deploy.CommonModels.csproj", "{4EAC461D-326C-4ECF-902E-C8FE10CC4F76}"
@@ -29,6 +27,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{368778
 		.nuget\NuGet.Config = .nuget\NuGet.Config
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
+		.nuget\packages.config = .nuget\packages.config
 	EndProjectSection
 EndProject
 Global
@@ -45,10 +44,6 @@ Global
 		{CE5B929C-C3A1-4A58-8EBB-2EE4B5B70C49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE5B929C-C3A1-4A58-8EBB-2EE4B5B70C49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE5B929C-C3A1-4A58-8EBB-2EE4B5B70C49}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8AF84EEC-BF8A-4AAE-9359-357DBCC65C32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8AF84EEC-BF8A-4AAE-9359-357DBCC65C32}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8AF84EEC-BF8A-4AAE-9359-357DBCC65C32}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8AF84EEC-BF8A-4AAE-9359-357DBCC65C32}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4EAC461D-326C-4ECF-902E-C8FE10CC4F76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4EAC461D-326C-4ECF-902E-C8FE10CC4F76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EAC461D-326C-4ECF-902E-C8FE10CC4F76}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -59,7 +54,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{CE5B929C-C3A1-4A58-8EBB-2EE4B5B70C49} = {57AEBFF5-F9DF-4632-8B00-EDA321D14535}
-		{8AF84EEC-BF8A-4AAE-9359-357DBCC65C32} = {57AEBFF5-F9DF-4632-8B00-EDA321D14535}
 		{4EAC461D-326C-4ECF-902E-C8FE10CC4F76} = {D00B2FFC-1263-4A51-AA74-70D6BD465FA5}
 	EndGlobalSection
 EndGlobal

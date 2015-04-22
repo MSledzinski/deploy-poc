@@ -1,4 +1,6 @@
-﻿namespace Poc.Deploy.WriteWinServiceHost
+﻿using Topshelf.Common.Logging;
+
+namespace Poc.Deploy.WriteWinServiceHost
 {
     using System;
     using System.Globalization;
@@ -19,22 +21,28 @@
 
                 var host = HostFactory.New(
                     configurator =>
-                        {
+                    {
+                        
+                        configurator.UseCommonLogging();
+
                             configurator.Service<ServiceWrapper>(
                                 callback =>
                                     {
+                                   
                                         callback.ConstructUsing(s => new ServiceWrapper());
                                         callback.WhenStarted(s => s.Start());
                                         callback.WhenStopped(s => s.Stop());
                                     });
 
-                            configurator.SetDisplayName("EmploymentWcfService");
-                            configurator.SetServiceName("EmploymentService");
+                       // configurator.RunAs("ServiceRunner", "FPPassword1234");
 
-                            configurator.RunAsLocalService();
+                            configurator.SetDisplayName("EmploymentWcfService");
+                            configurator.SetServiceName("EmpService");
                         });
 
                 host.Run();
+
+             
             }
             catch (Exception ex)
             {
