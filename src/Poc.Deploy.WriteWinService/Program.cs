@@ -36,8 +36,8 @@ namespace Poc.Deploy.WriteWinServiceHost
 
                        // configurator.RunAs("ServiceRunner", "FPPassword1234");
 
-                            configurator.SetDisplayName("EmploymentWcfService");
-                            configurator.SetServiceName("EmpService");
+                          //  configurator.SetDisplayName("EmploymentWcfService");
+                          //  configurator.SetServiceName("EmpService");
                         });
 
                 host.Run();
