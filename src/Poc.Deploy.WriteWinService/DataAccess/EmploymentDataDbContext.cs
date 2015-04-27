@@ -11,6 +11,8 @@
         public EmploymentDataDbContext()
             : base("EmployConnectionString")
         {
+            Configuration.ProxyCreationEnabled = false;
+            Configuration.LazyLoadingEnabled = false;
         }
 
         public IDbSet<Employer> Employers { get; set; }

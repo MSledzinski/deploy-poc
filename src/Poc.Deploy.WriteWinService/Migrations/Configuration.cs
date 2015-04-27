@@ -1,6 +1,7 @@
 namespace Poc.Deploy.WriteWinService.Migrations
 {
     using System.Data.Entity.Migrations;
+    using System.Linq;
 
     using Poc.Deploy.CommonModels.Domain;
     using Poc.Deploy.WriteWinService.DataAccess;
@@ -9,11 +10,17 @@ namespace Poc.Deploy.WriteWinService.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            this.AutomaticMigrationsEnabled = true;
+            this.AutomaticMigrationDataLossAllowed = false;
         }
 
         protected override void Seed(EmploymentDataDbContext context)
         {
+            if (context.Employers.Any())
+            {
+                return;
+            }
+
             var employer = new Employer(1, "employer1");
             context.Employers.Add(employer);
 
